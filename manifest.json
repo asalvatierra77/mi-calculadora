@@ -2,7 +2,7 @@
     "name": "Calculadora Simple",
     "short_name": "Calculadora",
     "description": "Una calculadora simple como PWA",
-    "start_url": "/mi-calculadora/",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#333333",
