@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script>
+        // Obtiene la pathname de la URL actual (ej: /mi-repo/calculations/)
+        var segment = 1;
+        var pathname = window.location.pathname; 
+        
+        // Divide la ruta en partes usando '/' como separador
+        var pathParts = pathname.split('/');
+        
+        // Reconstruye la URL base con el nombre del repositorio
+        if (pathParts.length > segment) {
+            // Redirige a la raíz de la aplicación (index.html)
+            window.location.href = '/' + pathParts[segment] + '/';
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting to the app...</p>
+</body>
+</html>
