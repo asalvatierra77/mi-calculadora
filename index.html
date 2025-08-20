@@ -6,15 +6,15 @@
     <title>Calculadora PWA</title>
     <meta name="theme-color" content="#333333"/>
     <!-- RUTA ABSOLUTA para el CSS -->
-    <link rel="stylesheet" href="/mi-calculadora/styles.css"> <!-- CAMBIADO -->
+    <link rel="stylesheet" href="/mi-calculadora/styles.css">
     <!-- Configuración del Manifest (RUTA ABSOLUTA) -->
-    <link rel="manifest" href="/mi-calculadora/manifest.json"> <!-- CAMBIADO -->
+    <link rel="manifest" href="/mi-calculadora/manifest.json">
     <!-- Para Safari en iOS (importante para el icono) -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Calculadora">
     <!-- RUTA ABSOLUTA para el icono de Apple -->
-    <link rel="apple-touch-icon" href="/mi-calculadora/icons/icon-192.png"> <!-- CAMBIADO -->
+    <link rel="apple-touch-icon" href="/mi-calculadora/icons/icon-192.png">
 </head>
 <body>
     <div class="calculator">
@@ -47,21 +47,21 @@
     </div>
 
     <!-- RUTA ABSOLUTA para el JS de la calculadora -->
-    <script src="/mi-calculadora/app.js"></script> <!-- CAMBIADO -->
+    <script src="/mi-calculadora/app.js"></script>
     <!-- Script para registrar el Service Worker -->
     <script>
         if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            // RUTA ABSOLUTA para el Service Worker (¡Ya la tenías bien!)
-            navigator.serviceWorker.register('/mi-calculadora/sw.js?v=2') 
-              .then((registration) => {
-                console.log('SW registrado con éxito: ', registration);
-              })
-              .catch((registrationError) => {
-                console.log('Error al registrar SW: ', registrationError);
-              });
-          });
+            window.addEventListener('load', () => {
+                // RUTA ABSOLUTA para el Service Worker
+                navigator.serviceWorker.register('/mi-calculadora/sw.js')
+                    .then((registration) => {
+                        console.log('SW registrado: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('Error SW: ', registrationError);
+                    });
+            });
         }
-      </script>
+    </script>
 </body>
 </html>
