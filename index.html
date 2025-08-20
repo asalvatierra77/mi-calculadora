@@ -48,16 +48,17 @@
     <!-- Script para registrar el Service Worker -->
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then((registration) => {
-                        console.log('SW registrado: ', registration);
-                    })
-                    .catch((registrationError) => {
-                        console.log('Error SW: ', registrationError);
-                    });
-            });
+          window.addEventListener('load', () => {
+            // Agregar un parámetro de versión (v2) fuerza la actualización
+            navigator.serviceWorker.register('/mi-calculadora/sw.js?v=2') 
+              .then((registration) => {
+                console.log('SW registrado con éxito: ', registration);
+              })
+              .catch((registrationError) => {
+                console.log('Error al registrar SW: ', registrationError);
+              });
+          });
         }
-    </script>
+      </script>
 </body>
 </html>
