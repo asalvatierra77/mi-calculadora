@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora PWA</title>
     <meta name="theme-color" content="#333333"/>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Configuración del Manifest -->
-    <link rel="manifest" href="manifest.json">
+    <!-- RUTA ABSOLUTA para el CSS -->
+    <link rel="stylesheet" href="/mi-calculadora/styles.css"> <!-- CAMBIADO -->
+    <!-- Configuración del Manifest (RUTA ABSOLUTA) -->
+    <link rel="manifest" href="/mi-calculadora/manifest.json"> <!-- CAMBIADO -->
     <!-- Para Safari en iOS (importante para el icono) -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Calculadora">
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <!-- RUTA ABSOLUTA para el icono de Apple -->
+    <link rel="apple-touch-icon" href="/mi-calculadora/icons/icon-192.png"> <!-- CAMBIADO -->
 </head>
 <body>
     <div class="calculator">
@@ -44,12 +46,13 @@
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <!-- RUTA ABSOLUTA para el JS de la calculadora -->
+    <script src="/mi-calculadora/app.js"></script> <!-- CAMBIADO -->
     <!-- Script para registrar el Service Worker -->
     <script>
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', () => {
-            // Agregar un parámetro de versión (v2) fuerza la actualización
+            // RUTA ABSOLUTA para el Service Worker (¡Ya la tenías bien!)
             navigator.serviceWorker.register('/mi-calculadora/sw.js?v=2') 
               .then((registration) => {
                 console.log('SW registrado con éxito: ', registration);
